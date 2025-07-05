@@ -31,7 +31,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = config(
     "ALLOWED_HOSTS",
-    default="localhost:3000,127.0.0.1, https://neuroverse-4ff73.web.app/",
+    default="localhost:3000,127.0.0.1,https://neuroverse-4ff73.web.app/",
 ).split(",")
 
 
@@ -147,7 +147,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # CORS settings
 CORS_ALLOWED_ORIGINS = config(
     "CORS_ALLOWED_ORIGINS",
-    default="http://localhost:3000,http://127.0.0.1:3000, https://neuroverse-4ff73.web.app/",
+    default="http://localhost:3000,http://127.0.0.1:3000,https://neuroverse-4ff73.web.app/",
 ).split(",")
 # CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
 
