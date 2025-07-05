@@ -29,7 +29,10 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="localhost:3000,127.0.0.1").split(",")
+ALLOWED_HOSTS = config(
+    "ALLOWED_HOSTS",
+    default="localhost:3000,127.0.0.1, https://neuroverse-4ff73.web.app/",
+).split(",")
 
 
 # Application definition
@@ -143,7 +146,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = config(
-    "CORS_ALLOWED_ORIGINS", default="http://localhost:3000,http://127.0.0.1:3000"
+    "CORS_ALLOWED_ORIGINS",
+    default="http://localhost:3000,http://127.0.0.1:3000, https://neuroverse-4ff73.web.app/",
 ).split(",")
 # CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
 
